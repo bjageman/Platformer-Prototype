@@ -184,6 +184,8 @@ public class Player : MonoBehaviour {
     private void Die()
     {
         Destroy(gameObject);
+        //TODO Really janky method
+        FindObjectOfType<GameOverMenu>().GetComponent<Text>().enabled = true;
     }
 
     void OnDrawGizmos()
